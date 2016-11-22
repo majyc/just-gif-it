@@ -21,9 +21,9 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.example.services.ConverterService;
-import com.example.services.GifEncoderService;
-import com.example.services.VideoDecoderService;
+import com.justgifit.services.ConverterService;
+import com.justgifit.services.GifEncoderService;
+import com.justgifit.services.VideoDecoderService;
 import com.madgag.gif.fmsware.AnimatedGifEncoder;
 
 @RestController
@@ -32,7 +32,7 @@ public class UploadController {
     private final static Logger log = LoggerFactory.getLogger(MethodHandles.lookup()
             .lookupClass());
 
-    @Value("${spring.http.multipart.location}")
+    @Value("${multipart.location}")
     private String location;
 
     @Inject
